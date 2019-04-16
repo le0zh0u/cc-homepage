@@ -11,6 +11,9 @@
       有<span style="font-weight: bold;">七种</span>颜色供用户<span style="font-weight: bold;">分类</span>使用。
     </p>
     <div>
+      <span>@ Leozhou</span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span>最新版本: 2.2</span>
+    </div>
+    <div>
       <h3>特色</h3>
       <div class="features">
         <ul>
@@ -40,6 +43,9 @@
       </div>
       <img class="qr-code" src="http://img.leozhou.me/picGo/20190416223311.png"/>
       <a class="private-policy" href="http://www.leozhou.me/archives/1555402854185" target="_blank" rel="Private Policy">隐私政策</a>
+    </div>
+    <div>
+      <p>@ Leozhou</p>
     </div>
   </div>
 </template>
