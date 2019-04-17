@@ -11,7 +11,7 @@
       有<span style="font-weight: bold;">七种</span>颜色供用户<span style="font-weight: bold;">分类</span>使用。
     </p>
     <div>
-      <span>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" @click="featureStatusChange(1)">当前版本: {{currentVersion}}</span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" @click="featureStatusChange(2)">审核中版本: {{nextVersion}}</span>
+      <span>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isCurrentVersion}" @click="featureStatusChange(1)">当前版本: {{currentVersion}}</span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isNextVersion }"  @click="featureStatusChange(2)">审核中版本: {{nextVersion}}</span>
     </div>
     <div>
       <div v-if="featureStatus == 1">
@@ -102,6 +102,12 @@ export default {
   computed: {
     backgroundImage: function() {
       return "url(" + this.iconImage + ")";
+    },
+    isCurrentVersion: function() {
+      return this.featureStatus === 1
+    },
+    isNextVersion: function() {
+      return this.featureStatus === 2
     }
   },
   methods: {
@@ -110,7 +116,6 @@ export default {
         this.featureStatus = 0
         return 
       }
-
       this.featureStatus = status
     }
   }
@@ -142,6 +147,10 @@ a {
 
 .feature-tab {
   cursor: pointer;
+}
+
+.current-tab {
+  font-weight: bold;
 }
 
 .features {
