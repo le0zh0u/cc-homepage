@@ -174,7 +174,7 @@ a {
 
 .screenshot-pannel {
   display: block;
-  background-color: #d5d5d5;
+  background-color: #e0e0e0;
   min-height: 500px;
   margin-top: 40px;
   line-height: 500px;
