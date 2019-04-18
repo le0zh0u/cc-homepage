@@ -1,6 +1,7 @@
 # cc-homepage
 Home Page for CC - 内容常用盒子
 
+![页面截图](http://img.leozhou.me/picGo/contentbox_leozhou_me_screenshot.png)
 
 ## Framework
 Vue cli
