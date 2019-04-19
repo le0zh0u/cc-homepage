@@ -1,34 +1,39 @@
 <template>
   <div class="hello">
     <div class="icon" :style=" { 'background-image': backgroundImage } "></div>
-    <h2>{{ appName }}</h2>
+    <h2 class="title">{{ $t('cc.title')  }}</h2>
     <div class="slogon">
-      <h1>一个「小而👍的内容盒子」应用</h1>
+       <!-- <h1 style="font-size: 16px; text-align: center;">{{ $t("message.hello") }}</h1> -->
+      <h1>{{ $t("cc.slogon") }}</h1>
     </div>
+    <!-- <i18n path="info" tag="p">
+      <span place="limit">{{ changeLimit }}</span>
+      <a place="action" :href="changeUrl">{{ $t('change') }}</a>
+    </i18n> -->
     <p>
       CC 是一个存储平时会使用到的<span style="font-weight: bold;">内容片段</span>的工具。<br>
       可以实现录入经常需要使用到的内容，然后需要时复制出来，直接使用。<br>
       有<span style="font-weight: bold;">七种</span>颜色供用户<span style="font-weight: bold;">分类</span>使用。
     </p>
     <div>
-      <span>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isCurrentVersion}" @click="featureStatusChange(1)">当前版本: {{currentVersion}}</span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isNextVersion }"  @click="featureStatusChange(2)">{{nextVersion}}</span>
+      <span>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isCurrentVersion}" @click="featureStatusChange(1)">{{$t('cc.currentVersion')}}: {{currentVersion}}</span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isNextVersion }"  @click="featureStatusChange(2)">{{nextVersion}}</span>
     </div>
     <div>
       <div v-if="featureStatus == 1">
-        <h3>👉 当前版本: {{currentVersion}} 👈</h3>
+        <h3>👉 {{$t('cc.currentVersion')}}: {{currentVersion}} 👈</h3>
         <div class="features">
           <ul>
             <li>
-              <span style="font-weight: bold;">颜色分类</span>：有七种颜色可以选择使用，满足日常分类所需
+              <span style="font-weight: bold;"> {{$t('cc.feature1-k')}} </span>：{{$t('cc.feature1-v')}}
             </li>
             <li>
-              <span style="font-weight: bold;">Drag & Drop</span>：支持页面拖拽自定义排序
+              <span style="font-weight: bold;"> {{$t('cc.feature2-k')}} </span>：{{$t('cc.feature2-v')}}
             </li>
             <li>
-              <span style="font-weight: bold;">快速复制</span>： 在列表页面中，快捷复制；详情页，右滑复制
+              <span style="font-weight: bold;"> {{$t('cc.feature3-k')}} </span>：{{$t('cc.feature3-v')}}
             </li>
             <li>
-                <span style="font-weight: bold;">iCloud同步</span>： 数据存储在iCloud中，安全，方便
+              <span style="font-weight: bold;"> {{$t('cc.feature4-k')}} </span>：{{$t('cc.feature4-v')}}
             </li>
           </ul>
         </div>
@@ -38,32 +43,32 @@
         <div class="features">
           <ul>
             <li>
-              <span style="font-weight: bold;">修复编辑页面键盘收缩</span>：点击顶部可收起键盘
+              <span style="font-weight: bold;">{{$t('cc.next-feature1-k')}}</span>：{{$t('cc.next-feature1-v')}}
             </li>
             <li>
-              <span style="font-weight: bold;">添加加密措施</span>：加入TouchID || FaceID
+              <span style="font-weight: bold;">{{$t('cc.next-feature2-k')}}</span>：{{$t('cc.next-feature2-v')}}
             </li>
             <li>
-              <span style="font-weight: bold;">优化iCloud同步机制</span>：优化本地缓存和异常处理机制
+              <span style="font-weight: bold;">{{$t('cc.next-feature3-k')}}</span>：{{$t('cc.next-feature3-v')}}
             </li>
           </ul>
         </div>
       </div>
       <div v-else>
-        <h3>特色</h3>
+        <h3>{{$t('cc.feature')}}</h3>
         <div class="features">
           <ul>
             <li>
-              <span style="font-weight: bold;">颜色分类</span>：有七种颜色可以选择使用，满足日常分类所需
+              <span style="font-weight: bold;"> {{$t('cc.feature1-k')}} </span>：{{$t('cc.feature1-v')}}
             </li>
             <li>
-              <span style="font-weight: bold;">Drag & Drop</span>：支持页面拖拽自定义排序
+              <span style="font-weight: bold;"> {{$t('cc.feature2-k')}} </span>：{{$t('cc.feature2-v')}}
             </li>
             <li>
-              <span style="font-weight: bold;">快速复制</span>： 在列表页面中，快捷复制；详情页，右滑复制
+              <span style="font-weight: bold;"> {{$t('cc.feature3-k')}} </span>：{{$t('cc.feature3-v')}}
             </li>
             <li>
-                <span style="font-weight: bold;">iCloud同步</span>： 数据存储在iCloud中，安全，方便
+              <span style="font-weight: bold;"> {{$t('cc.feature4-k')}} </span>：{{$t('cc.feature4-v')}}
             </li>
           </ul>
         </div>
@@ -95,11 +100,10 @@ export default {
     return {
       featureStatus: 0,
       currentVersion: '2.2',
-      nextVersion: 'TODO List'
+      nextVersion: 'TODO'
     };
   },
   props: {
-    appName: String,
     iconImage: String
   },
   computed: {
@@ -137,9 +141,6 @@ ul {
 li {
   display: list-item;
   margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 
 .icon {

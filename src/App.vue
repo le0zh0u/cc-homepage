@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <HelloWorld app-name="CC - 常用内容盒子" icon-image = "http://img.leozhou.me/picGo/icon-white@3x.png"/>
+    <a href="#" class="lang-change" @click="changeLocale">中文/EN</a> 
+    <HelloWorld icon-image = "http://img.leozhou.me/picGo/icon-white@3x.png"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import { switchLang }  from '@/locales'
 
 export default {
   name: 'app',
+  data: function() {
+    return {};
+  },
   components: {
     HelloWorld
+  },
+  methods: {
+    changeLocale () {
+      switchLang()
+    },
   }
 }
 </script>
@@ -32,5 +42,14 @@ export default {
 
 body {
   margin: 8px 0px;
+}
+
+a {
+  color: #42b983;
+}
+
+.lang-change {
+  float: right;
+  margin-right: 32px;
 }
 </style>

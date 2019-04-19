@@ -1,0 +1,26 @@
+{
+    "message": {
+      "hello": "good good study, day day up!"
+    },
+    "cc": {
+        "title": "CC - Common Content Box",
+        "slogon": "「A Colorful And 👍 Content Manage App」",
+        "currentVersion": "Version",
+        "feature": "Feature",
+        "feature1-k": "Color classification",
+        "feature1-v": "There are seven colors to choose from, to meet the needs of daily classification.",
+        "feature2-k": "Drag & Drop",
+        "feature2-v": "support page drag and custom sort in list",
+        "feature3-k": "Copy Easily",
+        "feature3-v": "In the list page, click the button to copy; or slide the copy to the right on the details page.",
+        "feature4-k": "iCloud Sync",
+        "feature4-v": "Keep data safely. Once save, copy anywhere.",
+        "next-feature1-k": "Pack up keyboard",
+        "next-feature1-v": "Auto pack up keyboard in edit mode when click nav bar.",
+        "next-feature2-k": "Add Security",
+        "next-feature2-v": "Add TouchID or FaceID to protect data.",
+        "next-feature3-k": "Optimize iCloud synchronization mechanism",
+        "next-feature3-v": "Optimize local caching and exception handling mechanisms."
+
+    }
+}
