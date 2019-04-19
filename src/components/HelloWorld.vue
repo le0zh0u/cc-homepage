@@ -40,6 +40,12 @@
             <li>
               <span style="font-weight: bold;">修复编辑页面键盘收缩</span>：点击顶部可收起键盘
             </li>
+            <li>
+              <span style="font-weight: bold;">添加加密措施</span>：加入TouchID || FaceID
+            </li>
+            <li>
+              <span style="font-weight: bold;">优化iCloud同步机制</span>：优化本地缓存和异常处理机制
+            </li>
           </ul>
         </div>
       </div>
@@ -89,7 +95,7 @@ export default {
     return {
       featureStatus: 0,
       currentVersion: '2.2',
-      nextVersion: '下一个版本: 2.2.1'
+      nextVersion: 'TODO List'
     };
   },
   props: {
