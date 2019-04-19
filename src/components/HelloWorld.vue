@@ -11,7 +11,7 @@
       有<span style="font-weight: bold;">七种</span>颜色供用户<span style="font-weight: bold;">分类</span>使用。
     </p>
     <div>
-      <span>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isCurrentVersion}" @click="featureStatusChange(1)">当前版本: {{currentVersion}}</span><span style="display: none">&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isNextVersion }"  @click="featureStatusChange(2)">审核中版本: {{nextVersion}}</span></span>
+      <span>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isCurrentVersion}" @click="featureStatusChange(1)">当前版本: {{currentVersion}}</span>&nbsp;👈&nbsp;|&nbsp;👉&nbsp;<span class="feature-tab" :class="{ 'current-tab': isNextVersion }"  @click="featureStatusChange(2)">{{nextVersion}}</span>
     </div>
     <div>
       <div v-if="featureStatus == 1">
@@ -34,20 +34,11 @@
         </div>
       </div>
       <div v-else-if="featureStatus == 2">
-        <h3>👉 审核中版本: {{nextVersion}} 👈</h3>
+        <h3>👉 {{nextVersion}} 👈</h3>
         <div class="features">
           <ul>
             <li>
-              <span style="font-weight: bold;">颜色分类</span>：有七种颜色可以选择使用，满足日常分类所需
-            </li>
-            <li>
-              <span style="font-weight: bold;">Drag & Drop</span>：支持页面拖拽自定义排序
-            </li>
-            <li>
-              <span style="font-weight: bold;">快速复制</span>： 在列表页面中，快捷复制；详情页，右滑复制
-            </li>
-            <li>
-                <span style="font-weight: bold;">iCloud同步</span>： 数据存储在iCloud中，安全，方便
+              <span style="font-weight: bold;">修复编辑页面键盘收缩</span>：点击顶部可收起键盘
             </li>
           </ul>
         </div>
@@ -98,7 +89,7 @@ export default {
     return {
       featureStatus: 0,
       currentVersion: '2.2',
-      nextVersion: '2.2'
+      nextVersion: '下一个版本: 2.2.1'
     };
   },
   props: {
