@@ -86,6 +86,10 @@
       <img class="qr-code" src="http://img.leozhou.me/picGo/20190416223311.png"/>
       <a class="private-policy" href="http://www.leozhou.me/archives/1555402854185" target="_blank" rel="Privacy Policy">隐私政策</a>
       <a class="private-policy" href="http://www.leozhou.me/archives/1555403342618" target="_blank" rel="Privacy Policy">Privacy Policy</a>
+      <div>
+        <p>{{$t('cc.vote-for-me')}}：</p>
+        <p><a target="_blank" href="https://www.producthunt.com/posts/cc-common-content-box">Product Hunt</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a target="_blank" href="http://next.36kr.com/posts/44558">NEXT</a> </p>
+      </div>
     </div>
     <div>
       <p>@ <a href="http://www.leozhou.me" target="_blank">Leozhou</a></p>

@@ -20,6 +20,7 @@
         "next-feature2-k": "添加加密措施",
         "next-feature2-v": "加入TouchID 或 FaceID",
         "next-feature3-k": "优化iCloud同步机制",
-        "next-feature3-v": "优化本地缓存和异常处理机制"
+        "next-feature3-v": "优化本地缓存和异常处理机制",
+        "vote-for-me": "如果觉得还不错，请投票"
     }
 }

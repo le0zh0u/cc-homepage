@@ -20,7 +20,7 @@
         "next-feature2-k": "Add Security",
         "next-feature2-v": "Add TouchID or FaceID to protect data.",
         "next-feature3-k": "Optimize iCloud synchronization mechanism",
-        "next-feature3-v": "Optimize local caching and exception handling mechanisms."
-
+        "next-feature3-v": "Optimize local caching and exception handling mechanisms.",
+        "vote-for-me": "If you like it, Please vote for me"
     }
 }
